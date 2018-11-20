@@ -10,6 +10,8 @@ chsh -s /bin/zsh;
 # Install powerlevel9k
 git clone https://github.com/bhilburn/powerlevel9k.git ~/.oh-my-zsh/custom/themes/powerlevel9k;
 
+# Fonts
+
 # Install zsh-syntax-highlighting
 sudo apt install zsh-syntax-highlighting;
 
