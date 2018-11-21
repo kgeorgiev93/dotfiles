@@ -18,6 +18,8 @@ alias dotf="cd ~/workspace/git/dotfiles"
 alias ll='ls -alF'
 alias l='ls -lF'
 
+export LESS="-XR"
+
 ################### POWERLEVEL9K SETTINGS ###################
 
 # General Prompt settings
