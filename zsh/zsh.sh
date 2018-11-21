@@ -10,11 +10,11 @@ chsh -s /bin/zsh
 # Install powerlevel9k
 git clone https://github.com/bhilburn/powerlevel9k.git ~/.oh-my-zsh/custom/themes/powerlevel9k
 
-# Fonts
+# Install fonts
 sudo apt install -y fonts-powerline
 
 # Install zsh-syntax-highlighting
 sudo apt install -y zsh-syntax-highlighting
 
 # Set up zshrc
-cp .zshrc ~/.zshrc
+cp zshrc ~/.zshrc

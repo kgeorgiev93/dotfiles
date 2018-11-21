@@ -1,7 +1,7 @@
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
-export ZSH="~/.oh-my-zsh"
+export ZSH="/home/krasimir/.oh-my-zsh"
 ZSH_THEME="powerlevel9k/powerlevel9k"
 DISABLE_AUTO_TITLE="false"
 
@@ -15,6 +15,7 @@ source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 unalias -m '*'
 alias ws="cd ~/workspace"
 alias dotf="cd ~/workspace/git/dotfiles"
+alias ls='ls --color=auto'
 alias ll='ls -alF'
 alias l='ls -lF'
 
