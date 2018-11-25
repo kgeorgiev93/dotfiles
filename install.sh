@@ -1,11 +1,15 @@
 # Git
-git/install.sh
+cd git
+./install.sh
 
 # Vim
-vim/install.sh
+cd ../vim
+./install.sh
 
 # Tmux
-tmux/install.sh
+cd ../tmux
+./install.sh
 
 # Zsh
-zsh/install.sh
+cd ../zsh
+./install.sh

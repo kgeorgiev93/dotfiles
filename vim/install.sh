@@ -1,3 +1,8 @@
+# Install pre-requesities
+sudo apt install -y gcc
+sudo apt install -y make
+sudo apt install -y ruby-dev
+
 # Install vim
 sudo apt install -y vim
 
@@ -11,6 +16,9 @@ CURRENT_DESKTOP="${XDG_CURRENT_DESKTOP}"
 
 # Setup vimrc
 cp vimrc ~/.vimrc
+
+# Install papercolor shceme first
+git clone https://github.com/NLKNguyen/papercolor-theme ~/.vim/bundle/papercolor-theme
 
 # Install vundle
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
