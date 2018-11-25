@@ -1,11 +1,11 @@
-set nocompatible              " be iMproved, required
-filetype off                  " required
+" VUNDLE
+set nocompatible
+filetype off
 
-" set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
-" let Vundle manage Vundle, required
+" Plugins
 Plugin 'VundleVim/Vundle.vim'
 
 Plugin 'wincent/command-t'
@@ -21,23 +21,26 @@ Plugin 'christoomey/vim-tmux-navigator'
 
 call vundle#end()
 
-" Sets how many lines of history VIM has to remember
-set history=500
-
-" Enable filetype plugins
-filetype plugin indent on
-
-set omnifunc=syntaxcomplete#Complete
-
-" Set to auto read when a file is changed from the outside
-set autoread
-
-" Set map leader
+" GENERAL
 let mapleader = ","
 let maplocalleader = ",,"
 
-" Turn on the WiLd menu
+filetype plugin indent on
+set history=500
+set omnifunc=syntaxcomplete#Complete
+set autoread
 set wildmenu
+set ruler
+set cmdheight=2
+set encoding=utf8
+set ffs=unix,dos,mac
+set number
+set mouse=c
+set clipboard=unnamedplus
+set cursorline
+set lazyredraw
+set showmatch
+set mat=2
 
 " Ignore compiled files
 set wildignore=*.o,*~,*.pyc
@@ -47,75 +50,48 @@ else
     set wildignore+=*/.git/*,*/.hg/*,*/.svn/*,*/.DS_Store
 endif
 
-"Always show current position
-set ruler
-
-" Height of the command bar
-set cmdheight=2
-
 " A buffer becomes hidden when it is abandoned
 set hid
 
-" Configure backspace so it acts as it should act
+" Configure backspace
 set backspace=eol,start,indent
 set whichwrap+=<,>,h,l
 
-" Ignore case when searching
+" Search
 set ignorecase
-
-" When searching try to be smart about cases
 set smartcase
-
-" Highlight search results
 set hlsearch
-
-" Makes search act like search in modern browsers
 set incsearch
 
-" Show matching brackets when text indicator is over them
-set showmatch
-
-" How many tenths of a second to blink when matching brackets
-set mat=2
-
-" Enable syntax highlighting
 syntax enable
 
 " Theme
-set background=dark
 colorscheme PaperColor
+set background=dark
 
-" Set utf8 as standard encoding and en_US as the standard language
-set encoding=utf8
-
-" Use Unix as the standard file type
-set ffs=unix,dos,mac
-
-" Turn backup off, since most stuff is in SVN, git et.c anyway...
+" No backups
 set nobackup
 set nowb
 set noswapfile
 
-" Use spaces instead of tabs
+" Tabs
 set expandtab
-
-" Be smart when using tabs ;)
 set smarttab
-
-" 1 tab == 3 spaces
 set shiftwidth=3
 set tabstop=3
 
-" Linebreak on 80 characters
-"set lbr
-"set tw=80
 set sw=0
 
-" Map <Space> to / (search) and Ctrl-<Space> to ? (backwards search)
+" Folding
+set foldenable
+set foldlevelstart=0
+set foldnestmax=10
+map <leader>z za
+
 map <space> /
 map <c-space> ?
 
-" Smart way to move between windows
+" Move between windows
 map <C-j> <C-W>j
 map <C-k> <C-W>k
 map <C-h> <C-W>h
@@ -125,7 +101,7 @@ map <C-l> <C-W>l
 map <leader>bl :bnext<cr>
 map <leader>bh :bprevious<cr>
 
-" Useful mappings for managin tabs
+" Map tabs
 map <leader>tn :tabnew<cr>
 map <leader>to :tabonly<cr>
 map <leader>tc :tabclose<cr>
@@ -142,19 +118,6 @@ if has('gui_running')
     set lines=999 columns=999
 endif
 
-" Map Nerdtree
-map <leader>n :NERDTreeToggle<cr>
-map <leader>r :NERDTreeFind<cr>
-
-" show line number
-set number
-
-" disable mouse
-set mouse=c
-
-" Access all clipboard
-set clipboard=unnamedplus
-
 " Hide men bar, toolbar and scrollbar
 set guioptions-=m  "menu bar
 set guioptions-=T  "toolbar
@@ -162,10 +125,19 @@ set guioptions-=r  "scrollbar
 set guioptions-=l "scrollbar
 set guioptions-=L "scrollbar
 
+" Map Nerdtree
+map <leader>n :NERDTreeToggle<cr>
+map <leader>r :NERDTreeFind<cr>
+
 " Custom file extensions
 au BufRead,BufNewFile *.launch set filetype=xml
 au BufRead,BufNewFile *.test set filetype=xml
 au BufRead,BufNewFile *.dxy set syntax=cpp.doxygen
+
+" edit vimrc/zshrc and load vimrc bindings
+nnoremap <leader>ev :vsp $MYVIMRC<CR>
+nnoremap <leader>ez :vsp ~/.zshrc<CR>
+nnoremap <leader>sv :source $MYVIMRC<CR>
 
 " Clear whitespace on save
 autocmd BufWritePre * %s/\s\+$//e
