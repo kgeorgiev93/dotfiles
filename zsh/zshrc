@@ -6,10 +6,9 @@ ZSH_THEME="powerlevel9k/powerlevel9k"
 DISABLE_AUTO_TITLE="false"
 
 # PLUGINS
-plugins=(globalias git docker mvn pip python sudo tmux)
+plugins=(globalias git docker mvn pip python sudo tmux zsh-syntax-highlighting)
 
 source $ZSH/oh-my-zsh.sh
-source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 # ALIASES
 unalias -m '*'

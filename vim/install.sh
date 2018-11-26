@@ -7,12 +7,7 @@ sudo apt install -y ruby-dev
 sudo apt install -y vim
 
 # Install gvim
-CURRENT_DESKTOP="${XDG_CURRENT_DESKTOP}"
-#if [ "$CURRENT_DESKTOP" = "KDE" ]; then
-   sudo apt install -y vim-gtk
-#else
-   #sudo apt install -y vim-gnome
-#fi
+sudo apt install -y vim-gtk
 
 # Setup vimrc
 cp vimrc ~/.vimrc

@@ -14,7 +14,7 @@ git clone https://github.com/bhilburn/powerlevel9k.git ~/.oh-my-zsh/custom/theme
 sudo apt install -y fonts-powerline
 
 # Install zsh-syntax-highlighting
-sudo apt install -y zsh-syntax-highlighting
+git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ~/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting
 
 # Set up zshrc
 cp zshrc ~/.zshrc
