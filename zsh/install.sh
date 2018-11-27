@@ -12,8 +12,7 @@ git clone https://github.com/bhilburn/powerlevel9k.git ~/.oh-my-zsh/custom/theme
 
 # Install fonts-powerline
 git clone https://github.com/powerline/fonts.git ~/fonts-powerline
-cd ~/fonts-powerline
-./install.sh
+~/fonts-powerline/install.sh
 rm -rf ~/fonts-powerline
 
 # Install zsh-syntax-highlighting
