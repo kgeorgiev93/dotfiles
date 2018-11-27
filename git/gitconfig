@@ -8,18 +8,11 @@
    br      = branch
    ci      = commit
    st      = status
-   sts     = status -s
-   stl     = status --long
    unstage = reset HEAD --
    last    = log -1 HEAD
    ls      = log --graph --color --pretty=format:"%Cred%h%x09%Cgreen\\ %d%Creset\\ %s\\ %x1b[33m[%an]"
    lsh     = log -20 --graph --color --pretty=format:"%Cred%h%x09%Cgreen\\ %d%Creset\\ %s\\ %x1b[33m[%an]"
-   ll      = log --color --pretty=format:"%Cred%h%Cgreen%d\\ %Creset%s\\ %x1b[33m[%an]" --numstat
-   lds     = log --graph --color --pretty=format:"%Cred%h\\ %ad%Cgreen%d\\ %Creset%s\\ %x1b[33m[%an]" --date=short
-   diffc   = diff --color
-   sl      = stash list
-   sp      = stash pop
-   pull-ff = pull --ff-only
+   diffcm  = diff --color-moved
 [core]
    safecrlf = true
 	editor = vim
