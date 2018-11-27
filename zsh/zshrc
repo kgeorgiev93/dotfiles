@@ -18,7 +18,7 @@ alias ls='ls --color=auto'
 alias ll='ls -alF'
 alias l='ls -lF'
 
-export LESS="-XR"
+export LESS="-XRF"
 
 ################### POWERLEVEL9K SETTINGS ###################
 
