@@ -1,3 +1,5 @@
+#!/bin/bash
+
 # Install zsh
 sudo apt install -y zsh
 
@@ -11,11 +13,15 @@ chsh -s /bin/zsh
 git clone https://github.com/bhilburn/powerlevel9k.git ~/.oh-my-zsh/custom/themes/powerlevel9k
 
 # Install fonts-powerline
-git clone https://github.com/powerline/fonts.git ~/fonts-powerline
-~/fonts-powerline/install.sh
-rm -rf ~/fonts-powerline
+if [[ `lsb_release -rs` == "14.04" ]]; then
+   git clone https://github.com/powerline/fonts.git ~/fonts-powerline
+   ~/fonts-powerline/install.sh
+   rm -rf ~/fonts-powerline
+else
+   sudo apt install fonts-powerline
+fi
 
-# Install zsh-syntax-highlighting
+ Install zsh-syntax-highlighting
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ~/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting
 
 # Set up zshrc
