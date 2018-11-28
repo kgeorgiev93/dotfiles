@@ -1,25 +1,25 @@
 [user]
-	email = kgeorgiev1993@gmail.com
-	name = Krasimir Georgiev
+    email = kgeorgiev1993@gmail.com
+    name = Krasimir Georgiev
 [alias]
-   fp      = fetch --prune
-   rhh     = reset --hard HEAD
-   co      = checkout
-   br      = branch
-   ci      = commit
-   st      = status
-   unstage = reset HEAD --
-   last    = log -1 HEAD
-   ls      = log --graph --color --pretty=format:"%Cred%h%x09%Cgreen\\ %d%Creset\\ %s\\ %x1b[33m[%an]"
-   lsh     = log -20 --graph --color --pretty=format:"%Cred%h%x09%Cgreen\\ %d%Creset\\ %s\\ %x1b[33m[%an]"
-   diffcm  = diff --color-moved
+    fp      = fetch --prune
+    rhh     = reset --hard HEAD
+    co      = checkout
+    br      = branch
+    ci      = commit
+    st      = status
+    unstage = reset HEAD --
+    last    = log -1 HEAD
+    ls      = log --graph --color --pretty=format:"%Cred%h%x09%Cgreen\\ %d%Creset\\ %s\\ %x1b[33m[%an]"
+    lsh     = log -20 --graph --color --pretty=format:"%Cred%h%x09%Cgreen\\ %d%Creset\\ %s\\ %x1b[33m[%an]"
+    diffcm  = diff --color-moved
 [core]
-   safecrlf = true
-	editor = vim
+    safecrlf = true
+    editor = vim
 	autocrlf = input
 [color]
-   ui = true
+    ui = true
 [push]
-   default = simple
+    default = simple
 [rebase]
-   autosquash = true
+    autosquash = true
