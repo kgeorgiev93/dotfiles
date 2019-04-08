@@ -16,7 +16,7 @@
 [core]
     safecrlf = true
     editor = vim
-	autocrlf = input
+	autocrlf = false
 [color]
     ui = true
 [push]

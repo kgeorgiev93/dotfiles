@@ -1,8 +1,4 @@
-TERM=xterm-256color
-
-# If you come from bash you might have to change your $PATH.
-# export PATH=$HOME/bin:/usr/local/bin:$PATH
-
+TERM="xterm-256color"
 export ZSH="/home/$USER/.oh-my-zsh"
 ZSH_THEME="powerlevel9k/powerlevel9k"
 DISABLE_AUTO_TITLE="false"
@@ -13,20 +9,27 @@ plugins=(globalias git docker mvn pip python sudo tmux zsh-syntax-highlighting)
 source $ZSH/oh-my-zsh.sh
 
 # ALIASES
-unalias -m '*'
-alias ws="cd ~/workspace"
-alias dotf="cd ~/workspace/git/dotfiles"
+#unalias -m '*'
+
 alias ls='ls --color=auto'
 alias ll='ls -alF'
 alias l='ls -lF'
+alias vz='vim ~/.zshrc'
+alias gvz='gvim ~/.zshrc'
+alias vv='vim ~/.vimrc'
+alias gvv='gvim ~/.vimrc'
+alias c='clear'
 
 export LESS="-XRF"
+
+# SeeByte
+source ~/.seebyte.sh
 
 ################### POWERLEVEL9K SETTINGS ###################
 
 # General Prompt settings
 POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(context dir dir_writable vcs)
-POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status ip date time)
+POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status date time)
 POWERLEVEL9K_PROMPT_ADD_NEWLINE=true
 POWERLEVEL9K_PROMPT_ON_NEWLINE=true
 
@@ -69,10 +72,6 @@ POWERLEVEL9K_VCS_UNTRACKED_FOREGROUND='black'
 POWERLEVEL9K_VCS_UNTRACKED_BACKGROUND='011' #yellow
 POWERLEVEL9K_VCS_MODIFIED_FOREGROUND='black'
 POWERLEVEL9K_VCS_MODIFIED_BACKGROUND='196' #red
-
-# IP
-POWERLEVEL9K_IP_FOREGROUND='white'
-POWERLEVEL9K_IP_BACKGROUND='234'
 
 # DATE
 POWERLEVEL9K_DATE_FOREGROUND='white'
