@@ -116,6 +116,7 @@ map <leader>te :tabedit <c-r>=expand("%:p:h")<cr>/
 
 " Start gvim in full screen
 if has('gui_running')
+    set guifont=Monospace\ 13
     set lines=999 columns=999
 endif
 
