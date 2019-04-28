@@ -9,14 +9,12 @@ plugins=(globalias git docker mvn pip python sudo tmux zsh-syntax-highlighting)
 source $ZSH/oh-my-zsh.sh
 
 # ALIASES
-#unalias -m '*'
-
+unalias -m '*'
 alias ws="cd ~/workspace"
 alias ls='ls --color=auto'
 alias ll='ls -alF'
 alias l='ls -lF'
 alias c='clear'
-alias restart_plasma="killall plasmashell; kstart plasmashell"
 
 # EXPORTS
 export LESS="-XRF"
