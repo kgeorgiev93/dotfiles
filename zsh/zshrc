@@ -10,6 +10,7 @@ source $ZSH/oh-my-zsh.sh
 
 # ALIASES
 unalias -m '*'
+alias grep="grep --color=auto"
 alias ws="cd ~/workspace"
 alias ls='ls --color=auto'
 alias ll='ls -alF'

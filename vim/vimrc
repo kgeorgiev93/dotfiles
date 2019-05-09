@@ -78,8 +78,8 @@ set noswapfile
 " Tabs
 set expandtab
 set smarttab
-set shiftwidth=3
-set tabstop=3
+set shiftwidth=4
+set tabstop=4
 
 set sw=0
 
