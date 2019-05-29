@@ -16,12 +16,16 @@ alias ls='ls --color=auto'
 alias ll='ls -alF'
 alias l='ls -lF'
 alias c='clear'
+alias hunter_build='build.py --jobs=8 --toolchain=gcc-7-cxx14-pic \
+--fwd HUNTER_RUN_INSTALL=ON HUNTER_CONFIGURATION_TYPES=Release \
+--config Release '
 
 # Binds
 bindkey '^ ' autosuggest-accept # binds ctrl-space to accept current autosuggestion
 
 # EXPORTS
 export LESS="-XRF"
+export PATH=~/workspace/git/ruslo/polly/bin:$PATH
 
 ################### POWERLEVEL9K SETTINGS ###################
 
