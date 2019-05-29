@@ -17,6 +17,9 @@ alias ll='ls -alF'
 alias l='ls -lF'
 alias c='clear'
 
+# Binds
+bindkey '^ ' autosuggest-accept # binds ctrl-space to accept current autosuggestion
+
 # EXPORTS
 export LESS="-XRF"
 
