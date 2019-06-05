@@ -16,9 +16,15 @@ alias ls='ls --color=auto'
 alias ll='ls -alF'
 alias l='ls -lF'
 alias c='clear'
+
+# Hunter
 alias hunter_build='build.py --jobs=8 --toolchain=gcc-7-cxx14-pic \
 --fwd HUNTER_RUN_INSTALL=ON HUNTER_CONFIGURATION_TYPES=Release \
 --config Release '
+
+alias hunter_build_debug='build.py --jobs=8 --toolchain=gcc-7-cxx14-pic \
+--fwd HUNTER_RUN_INSTALL=ON HUNTER_CONFIGURATION_TYPES=Debug HUNTER_KEEP_PACKAGE_SOURCES=ON \
+--config Debug '
 
 # Binds
 bindkey '^ ' autosuggest-accept # binds ctrl-space to accept current autosuggestion
