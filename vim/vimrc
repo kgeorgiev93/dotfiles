@@ -145,6 +145,10 @@ nnoremap <leader>sv :source $MYVIMRC<CR>
 " Clear whitespace on save
 "autocmd BufWritePre * %s/\s\+$//e
 
+" Termdebug
+let g:termdebug_wide = 1
+packadd termdebug
+
 " Syntastic
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
