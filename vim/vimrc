@@ -19,6 +19,7 @@ Plugin 'tpope/vim-obsession'
 Plugin 'dhruvasagar/vim-prosession'
 Plugin 'christoomey/vim-tmux-navigator'
 Plugin 'vim-syntastic/syntastic'
+Plugin 'godlygeek/tabular'
 
 call vundle#end()
 
