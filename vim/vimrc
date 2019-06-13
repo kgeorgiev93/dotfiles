@@ -43,7 +43,6 @@ set cursorline
 set lazyredraw
 set showmatch
 set mat=2
-set nomodeline
 
 " Ignore compiled files
 set wildignore=*.o,*~,*.pyc
