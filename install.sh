@@ -6,6 +6,10 @@ cd git
 cd ../vim
 ./install.sh
 
+# Ctags
+cd ../ctags
+./install.sh
+
 # Tmux
 cd ../tmux
 ./install.sh
