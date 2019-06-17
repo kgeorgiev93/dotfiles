@@ -9,6 +9,9 @@ sudo apt install -y vim
 # Install gvim
 sudo apt install -y vim-gtk
 
+# Install ctags
+sudo apt install -y exuberant-ctags
+
 # Setup vimrc
 cp vimrc ~/.vimrc
 
@@ -33,3 +36,7 @@ vim -u NONE -c "helptags vim-fugitive/doc" -c q
 # Set up obsession
 cd ~/.vim/bundle
 vim -u NONE -c "helptags vim-obsession/doc" -c q
+
+# Set up ctags
+cd ~/workspace
+ctags -R .
