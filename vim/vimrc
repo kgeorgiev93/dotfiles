@@ -146,9 +146,15 @@ nnoremap <leader>sv :source $MYVIMRC<CR>
 " Clear whitespace on save
 "autocmd BufWritePre * %s/\s\+$//e
 
+" Tags
 " Look for a tag file in the directory of the current file, upwards until
 " reaching HOME
 set tags=./tags,tags;$HOME
+
+" Ctrl-[ to open tag in a new tab
+map <C-W><C-[> :tab split<CR>:exec("tag ".expand("<cword>"))<CR>
+" Ctrl-] to open tag in a vertical split
+map <C-W><C-]> :vsp <CR>:exec("tag ".expand("<cword>"))<CR>
 
 " Termdebug
 let g:termdebug_wide = 1
