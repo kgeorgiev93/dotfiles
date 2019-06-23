@@ -12,6 +12,15 @@ sudo apt install -y vim-gtk
 # Install ctags
 sudo apt install -y exuberant-ctags
 
+# Install ripgrep
+wget https://github.com/BurntSushi/ripgrep/releases/download/11.0.1/ripgrep_11.0.1_amd64.deb ~/ripgrep_11.0.1_amd64.deb
+sudo dpkg -i ripgrep_11.0.1_amd64.deb
+rm ~/ripgrep_11.0.1_amd64.deb
+
+# Install fzf
+git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
+~/.fzf/install
+
 # Setup vimrc
 cp vimrc ~/.vimrc
 
@@ -23,11 +32,6 @@ git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 
 # Install plugins
 vim +PluginInstall +qall
-
-# Set up command-t
-cd ~/.vim/bundle/command-t/ruby/command-t/ext/command-t
-ruby extconf.rb
-make
 
 # Set up fugitive
 cd ~/.vim/bundle
