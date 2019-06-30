@@ -17,10 +17,10 @@ Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-obsession'
 Plugin 'dhruvasagar/vim-prosession'
 Plugin 'christoomey/vim-tmux-navigator'
-Plugin 'vim-syntastic/syntastic'
 Plugin 'godlygeek/tabular'
 Plugin 'rhysd/vim-clang-format'
 Plugin 'junegunn/fzf.vim'
+Plugin 'w0rp/ale'
 
 call vundle#end()
 
@@ -44,14 +44,6 @@ set cursorline
 set lazyredraw
 set showmatch
 set mat=2
-
-" Ignore compiled files
-set wildignore=*.o,*~,*.pyc
-if has("win16") || has("win32")
-    set wildignore+=.git\*,.hg\*,.svn\*
-else
-    set wildignore+=*/.git/*,*/.hg/*,*/.svn/*,*/.DS_Store
-endif
 
 " A buffer becomes hidden when it is abandoned
 set hid
@@ -112,10 +104,6 @@ map <leader>tm :tabmove
 map <leader>tl :tabnext<cr>
 map <leader>th :tabprev<cr>
 
-" Opens a new tab with the current buffer's path
-" Super useful when editing files in the same directory
-map <leader>te :tabedit <c-r>=expand("%:p:h")<cr>/
-
 " Start gvim in full screen
 if has('gui_running')
     set guifont=Monospace\ 13
@@ -129,7 +117,7 @@ set guioptions-=r  "scrollbar
 set guioptions-=l "scrollbar
 set guioptions-=L "scrollbar
 
-" FZF and ripgrep
+" FZF
 set rtp+=~/.fzf
 
 nnoremap <C-f> :Files<Cr>
@@ -171,20 +159,3 @@ map <C-W><C-]> :vsp <CR>:exec("tag ".expand("<cword>"))<CR>
 " Termdebug
 let g:termdebug_wide = 1
 packadd termdebug
-
-" Syntastic
-set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*
-
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_open = 1
-let g:syntastic_check_on_wq = 0
-let g:syntastic_rst_checkers = ["sphinx"]
-let g:syntastic_mode_map = {
-    \ "mode": "active",
-    \ "passive_filetypes": ["cpp"] }
-"let g:syntastic_cpp_remove_include_errors = 1
-"let g:syntastic_cpp_check_header = 1
-"let g:syntastic_cpp_include_dirs = ["include"]
