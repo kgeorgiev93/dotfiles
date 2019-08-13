@@ -20,7 +20,11 @@ Plugin 'christoomey/vim-tmux-navigator'
 Plugin 'godlygeek/tabular'
 Plugin 'rhysd/vim-clang-format'
 Plugin 'junegunn/fzf.vim'
-Plugin 'w0rp/ale'
+Plugin 'dense-analysis/ale'
+Plugin 'cespare/vim-toml'
+Plugin 'vim-python/python-syntax'
+"Plugin 'ycm-core/YouCompleteMe'
+Plugin 'davidhalter/jedi-vim'
 
 call vundle#end()
 
@@ -59,6 +63,10 @@ set hlsearch
 set incsearch
 
 syntax enable
+
+" enable all Python syntax highlighting features
+let python_highlight_all = 1
+let python_version_2 = 0
 
 " Theme
 colorscheme PaperColor
@@ -159,3 +167,12 @@ map <C-W><C-]> :vsp <CR>:exec("tag ".expand("<cword>"))<CR>
 " Termdebug
 let g:termdebug_wide = 1
 packadd termdebug
+
+" Python
+let NERDTreeIgnore=['\.pyc$', '\~$'] "ignore files in NERDTree
+
+" Jedi-vim
+let g:jedi#completions_command = "<Tab>"
+
+" YCM
+"let g:ycm_global_ycm_extra_conf = "~/.vim/bundle/YouCompleteMe/.ycm_extra_conf.py"
