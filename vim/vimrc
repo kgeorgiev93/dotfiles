@@ -181,9 +181,6 @@ nnoremap <leader>ev :vsp $MYVIMRC<CR>
 nnoremap <leader>ez :vsp ~/.zshrc<CR>
 nnoremap <leader>sv :source $MYVIMRC<CR>
 
-" Clear whitespace on save
-"autocmd BufWritePre * %s/\s\+$//e
-
 " Tags
 " Look for a tag file in the directory of the current file, upwards until
 " reaching HOME
