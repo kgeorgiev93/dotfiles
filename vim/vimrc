@@ -55,6 +55,9 @@ Plugin 'davidhalter/jedi-vim'
 " Toml
 Plugin 'cespare/vim-toml'
 
+" Dockerfile syntax
+Plugin 'ekalinin/Dockerfile.vim'
+
 call vundle#end()
 
 " ======== GENERAL ========
@@ -175,6 +178,7 @@ au BufRead,BufNewFile *.launch set filetype=xml
 au BufRead,BufNewFile *.test set filetype=xml
 au BufRead,BufNewFile *.test.in set filetype=xml
 au BufRead,BufNewFile *.dxy set syntax=cpp.doxygen
+au BufRead,BufNewFile *.conf set syntax=dosini
 
 " edit vimrc/zshrc and load vimrc bindings
 nnoremap <leader>ev :vsp $MYVIMRC<CR>
@@ -199,7 +203,6 @@ packadd termdebug
 let NERDTreeIgnore=['\.pyc$', '\~$'] "ignore files in NERDTree
 
 " Jedi-vim
-let g:jedi#completions_command = "<Tab>"
 let g:jedi#usages_command = "<leader>u"
 let g:jedi#rename_command = "<leader>i"
 
