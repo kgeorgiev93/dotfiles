@@ -48,6 +48,9 @@ Plugin 'dense-analysis/ale'
 " Code completion
 "Plugin 'ycm-core/YouCompleteMe'
 
+" sourcetrail
+Plugin 'CoatiSoftware/vim-sourcetrail'
+
 " Python
 Plugin 'vim-python/python-syntax'
 Plugin 'davidhalter/jedi-vim'
@@ -172,6 +175,7 @@ let g:fzf_tags_command = 'ctags -R'
 " Map Nerdtree
 map <leader>n :NERDTreeToggle<cr>
 map <leader>r :NERDTreeFind<cr>
+let g:NERDTreeWinSize=60
 
 " Custom file extensions
 au BufRead,BufNewFile *.launch set filetype=xml
@@ -179,6 +183,7 @@ au BufRead,BufNewFile *.test set filetype=xml
 au BufRead,BufNewFile *.test.in set filetype=xml
 au BufRead,BufNewFile *.dxy set syntax=cpp.doxygen
 au BufRead,BufNewFile *.conf set syntax=dosini
+au BufRead,BufNewFile Jenkinsfile set syntax=groovy
 
 " edit vimrc/zshrc and load vimrc bindings
 nnoremap <leader>ev :vsp $MYVIMRC<CR>
@@ -194,6 +199,9 @@ set tags=./tags,tags;$HOME
 map <C-W><C-[> :tab split<CR>:exec("tag ".expand("<cword>"))<CR>
 " Ctrl-] to open tag in a vertical split
 map <C-W><C-]> :vsp <CR>:exec("tag ".expand("<cword>"))<CR>
+
+" Sourcetrail
+let g:sourcetrail_autostart = 1
 
 " Termdebug
 let g:termdebug_wide = 1
