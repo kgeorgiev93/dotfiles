@@ -141,12 +141,15 @@ map <leader>bl :bnext<cr>
 map <leader>bh :bprevious<cr>
 
 " Map tabs
-map <leader>tn :tabnew<cr>
-map <leader>to :tabonly<cr>
-map <leader>tc :tabclose<cr>
-map <leader>tm :tabmove
-map <leader>tl :tabnext<cr>
-map <leader>th :tabprev<cr>
+map tn :tabnew<cr>
+map tc :tabclose<cr>
+map tm :tabmove
+"map tl :tabnext<cr>
+"map th :tabprev<cr>
+execute "set <M-l>=\el"
+execute "set <M-h>=\eh"
+noremap <M-l> :tabnext<cr>
+noremap <M-h> :tabprev<cr>
 
 " Start gvim in full screen
 if has('gui_running')
