@@ -24,7 +24,7 @@ Plugin 'scrooloose/nerdcommenter'
 Plugin 'scrooloose/nerdtree'
 
 " Status/tabline
-Plugin 'vim-airline/vim-airline'
+Plugin 'itchyny/lightline.vim'
 
 " Git
 Plugin 'tpope/vim-fugitive'
@@ -107,6 +107,12 @@ let python_version_2 = 0
 " Theme
 colorscheme PaperColor
 set background=dark
+
+" lightline
+set laststatus=2
+let g:lightline = {
+      \ 'colorscheme': 'one',
+      \ }
 
 " No backups
 set nobackup
