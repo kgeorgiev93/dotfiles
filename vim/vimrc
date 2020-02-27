@@ -88,6 +88,9 @@ set mat=2
 " A buffer becomes hidden when it is abandoned
 set hid
 
+" number of lines to keep above and below the cursor
+:set scrolloff=13
+
 " Configure backspace
 set backspace=eol,start,indent
 set whichwrap+=<,>,h,l
@@ -156,12 +159,6 @@ execute "set <M-l>=\el"
 execute "set <M-h>=\eh"
 noremap <M-l> :tabnext<cr>
 noremap <M-h> :tabprev<cr>
-
-" Start gvim in full screen
-if has('gui_running')
-    set guifont=Monospace\ 13
-    set lines=999 columns=999
-endif
 
 " Hide men bar, toolbar and scrollbar
 set guioptions-=m  "menu bar
