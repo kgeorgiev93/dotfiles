@@ -35,6 +35,7 @@ Plugin 'dhruvasagar/vim-prosession'
 
 " Vim-tmux
 Plugin 'christoomey/vim-tmux-navigator'
+Plugin 'tmux-plugins/vim-tmux-focus-events'
 
 " Clang-format
 Plugin 'rhysd/vim-clang-format'
