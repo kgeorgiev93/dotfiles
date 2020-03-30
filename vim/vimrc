@@ -62,6 +62,10 @@ Plugin 'cespare/vim-toml'
 " Dockerfile syntax
 Plugin 'ekalinin/Dockerfile.vim'
 
+" Plantuml
+Plugin 'scrooloose/vim-slumlord'
+Plugin 'aklt/plantuml-syntax'
+
 call vundle#end()
 
 " ======== GENERAL ========
