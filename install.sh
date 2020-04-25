@@ -1,19 +1,27 @@
-# Git
-cd git
-./install.sh
+# Files
+cd files
+./setup.sh
 
-# Vim
-cd ../vim
-./install.sh
+# Utils
+cd ../utils
+./setup.sh
+
+# Git
+cd ../git
+./setup.sh
 
 # Ctags
 cd ../ctags
-./install.sh
+./setup.sh
 
 # Tmux
 cd ../tmux
-./install.sh
+./setup.sh
 
 # Zsh
 cd ../zsh
-./install.sh
+./setup.sh
+
+# Vim
+cd ../vim
+./setup.sh

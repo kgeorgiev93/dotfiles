@@ -1,28 +1,14 @@
 # Install pre-requesities
-sudo apt install -y gcc
-sudo apt install -y make
-sudo apt install -y ruby-dev
+curl -sL install-node.now.sh | sudo bash
 
 # Install vim
 sudo apt install -y vim
-
-# Install gvim
 sudo apt install -y vim-gtk
-
-# Install ctags
-sudo apt install -y exuberant-ctags
-
-# Install ripgrep
-sudo apt install -y ripgrep
-
-# Install fzf
-git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
-~/.fzf/install
 
 # Setup vimrc
 cp vimrc ~/.vimrc
 
-# Install papercolor shceme first
+# Install vim papercolor scheme first
 git clone https://github.com/NLKNguyen/papercolor-theme ~/.vim/bundle/papercolor-theme
 
 # Install vundle
@@ -30,6 +16,14 @@ git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 
 # Install plugins
 vim +PluginInstall +qall
+
+# coc setup
+vim -c ':call coc#util#install()'
+cp coc-settings.json ~/.vim/
+
+# coc extensions
+vim -c 'CocInstall coc-python coc-rust-analyzer coc-clangd coc-cmake coc-java coc-json coc-markdownlint coc-snippets \
+    coc-tag coc-omni coc-syntax'
 
 # Set up fugitive
 cd ~/.vim/bundle

@@ -1,6 +1,6 @@
 # Dotfiles
 
-Dotfiles for vim, zsh, tmux, git. For Ubuntu 18.04 and above.
+Dotfiles for vim, zsh, tmux, git. For Ubuntu 20.04 and above.
 
 Vim version >= 8.0
 
