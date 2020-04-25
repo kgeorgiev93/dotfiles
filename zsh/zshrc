@@ -31,7 +31,7 @@ bindkey '^ ' autosuggest-accept # binds ctrl-space to accept current autosuggest
 
 # EXPORTS
 export LESS="-XRF"
-export PATH=~/workspace/git/ruslo/polly/bin:$PATH
+export PATH=~/workspace/git/ruslo/polly/bin:~/.cargo/bin:$PATH
 export FZF_DEFAULT_COMMAND='rg --files --no-ignore-vcs --hidden'
 
 ################### POWERLEVEL9K SETTINGS ###################
