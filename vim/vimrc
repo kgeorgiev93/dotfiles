@@ -183,6 +183,9 @@ set guioptions-=L "scrollbar
 let python_highlight_all = 1
 let python_version_2 = 0
 
+" === Rust
+let g:rustfmt_autosave = 1
+
 " === FZF and rg
 set rtp+=~/.fzf
 nnoremap <C-f> :Files<Cr>
