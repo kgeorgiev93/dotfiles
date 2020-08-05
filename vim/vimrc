@@ -255,10 +255,6 @@ let g:lightline.component_type = {
 \ }
 
 
-" COC
-
-let g:coc_node_path = "/usr/local/bin/node"
-
 " specify some specific ale linter sources, rest are using defaults
 "let g:ale_linters = {
 "\   'c': ['clang', 'clangtidy', 'clang-format'],
@@ -282,6 +278,8 @@ nnoremap <leader>sv :source $MYVIMRC<CR>
 
 
 " =============== COC
+let g:coc_node_path = "/usr/local/bin/node"
+
 " TextEdit might fail if hidden is not set.
 set hidden
 
@@ -315,11 +313,6 @@ set signcolumn=yes
 "" select omni completion entry with enter (always supress newline)
 "inoremap <expr> <CR> pumvisible() ? "\<C-Y>" : "\<CR>"
 
-
-
-
-
-
 " Use tab for trigger completion with characters ahead and navigate.
 " NOTE: Use command ':verbose imap <tab>' to make sure tab is not mapped by
 " other plugin before putting this into your config.
@@ -350,10 +343,10 @@ inoremap <silent><expr> <c-space> coc#refresh()
 "nmap <silent> ]g <Plug>(coc-diagnostic-next)
 
 "" GoTo code navigation.
-"nmap <silent> gd <Plug>(coc-definition)
-"nmap <silent> gy <Plug>(coc-type-definition)
-"nmap <silent> gi <Plug>(coc-implementation)
-"nmap <silent> gr <Plug>(coc-references)
+nmap <silent> gd <Plug>(coc-definition)
+nmap <silent> gy <Plug>(coc-type-definition)
+nmap <silent> gi <Plug>(coc-implementation)
+nmap <silent> gr <Plug>(coc-references)
 
 "" Use K to show documentation in preview window.
 "nnoremap <silent> K :call <SID>show_documentation()<CR>

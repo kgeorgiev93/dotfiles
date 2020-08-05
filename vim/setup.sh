@@ -1,4 +1,5 @@
-# Install pre-requesities
+# Install dependencies
+# coc
 curl -sL install-node.now.sh | sudo bash
 
 # Install vim
@@ -22,8 +23,8 @@ vim -c ':call coc#util#install()'
 cp coc-settings.json ~/.vim/
 
 # coc extensions
-vim -c 'CocInstall coc-python coc-rust-analyzer coc-clangd coc-cmake coc-java coc-json coc-markdownlint coc-snippets \
-    coc-tag coc-omni coc-syntax'
+vim -c 'CocInstall coc-python coc-rust-analyzer coc-clangd coc-cmake coc-json coc-markdownlint coc-snippets \
+    coc-tag'
 
 # Set up fugitive
 cd ~/.vim/bundle
