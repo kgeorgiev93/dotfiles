@@ -41,6 +41,9 @@ Plugin 'tmux-plugins/vim-tmux-focus-events'
 " Clang-format
 Plugin 'rhysd/vim-clang-format'
 
+" cxx semantic highlight
+Plugin 'jackguo380/vim-lsp-cxx-highlight'
+
 " Fuzzy finder
 Plugin 'junegunn/fzf.vim'
 
