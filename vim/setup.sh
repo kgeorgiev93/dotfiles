@@ -1,5 +1,6 @@
 # Install dependencies
 # coc
+sudo apt install -y yarn
 curl -sL install-node.now.sh | sudo bash
 
 # Install vim
