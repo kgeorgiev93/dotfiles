@@ -10,18 +10,13 @@
     "clangd.enabled": true,
     "clangd.semanticHighlighting": true,
     "clangd.arguments": [
-            "--compile_args_from=filesystem",
             "--all-scopes-completion",
-            "--background-index",
-            "--clang-tidy",
-            "--cross-file-rename",
-            "--completion-parse=always",
+            "--background-index=false",
             "--completion-style=detailed",
-            "--function-arg-placeholders",
             "--header-insertion-decorators",
             "--header-insertion=never",
-            "--limit-results=0",
-            "-j=6",
-            "--pch-storage=memory"
+            "--limit-results=100",
+            "-j=8",
+            "--pch-storage=disk"
           ]
 }
