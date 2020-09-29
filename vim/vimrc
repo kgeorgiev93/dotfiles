@@ -273,6 +273,8 @@ let g:ale_linters = {
 \   'c': ['clang', 'clangtidy', 'clang-format'],
 \ }
 
+let g:ale_disable_lsp = 1
+
 " ===== COC
 let g:coc_node_path = "/usr/local/bin/node"
 
