@@ -11,11 +11,11 @@
     "clangd.semanticHighlighting": true,
     "clangd.arguments": [
             "--all-scopes-completion",
-            "--background-index=false",
+            "--background-index",
             "--completion-style=detailed",
             "--header-insertion-decorators",
             "--header-insertion=never",
-            "--limit-results=100",
+            "--limit-results=0",
             "-j=8",
             "--pch-storage=disk"
           ]
