@@ -30,6 +30,9 @@ Plugin 'itchyny/lightline.vim'
 " Git
 Plugin 'tpope/vim-fugitive'
 
+" Buffers
+Plugin 'Asheq/close-buffers.vim'
+
 " Sessions
 Plugin 'tpope/vim-obsession'
 Plugin 'dhruvasagar/vim-prosession'
