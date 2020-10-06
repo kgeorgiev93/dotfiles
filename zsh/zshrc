@@ -16,6 +16,7 @@ alias ls='ls --color=auto'
 alias ll='ls -alF'
 alias l='ls -lF'
 alias c='clear'
+alias gitupd='gitup -t -1 -p'
 
 # Hunter
 alias hunter_build='build.py --jobs=8 --toolchain=gcc-7-cxx14-pic \
