@@ -13,6 +13,10 @@ sudo chmod +x /usr/local/bin/rust-analyzer-linux
 rustup component add rust-src
 
 # python
+git clone git://github.com/earwig/git-repo-updater.git
+cd git-repo-updater
+sudo python3 setup.py install
+cd ..; rm -rf git-repo-updater
 
 # ctags
 sudo apt install -y exuberant-ctags
