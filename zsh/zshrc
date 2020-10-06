@@ -26,13 +26,15 @@ alias hunter_build_debug='build.py --jobs=8 --toolchain=gcc-7-cxx14-pic \
 --fwd HUNTER_RUN_INSTALL=ON HUNTER_CONFIGURATION_TYPES=Debug HUNTER_KEEP_PACKAGE_SOURCES=ON \
 --config Debug '
 
+source ~/workspace/docker/hunter_builds/.bash_aliases
+
 # Binds
 bindkey '^ ' autosuggest-accept # binds ctrl-space to accept current autosuggestion
 
 # EXPORTS
 export LESS="-XRF"
 export PATH=~/workspace/git/ruslo/polly/bin:~/.cargo/bin:$PATH
-export FZF_DEFAULT_COMMAND='rg --files --no-ignore-vcs --hidden'
+export FZF_DEFAULT_COMMAND='rg --files --ignore-vcs --hidden'
 
 ################### POWERLEVEL9K SETTINGS ###################
 

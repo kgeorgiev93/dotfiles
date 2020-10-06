@@ -11,6 +11,7 @@ Plugin 'VundleVim/Vundle.vim'
 
 " Theme
 Plugin 'NLKNguyen/papercolor-theme'
+Plugin 'tomasiser/vim-code-dark'
 
 " Whitespace management
 Plugin 'ntpeters/vim-better-whitespace'
@@ -75,6 +76,10 @@ Plugin 'aklt/plantuml-syntax'
 
 " Rust
 Plugin 'rust-lang/rust.vim'
+Plugin 'mhinz/vim-crates'
+
+" Protobuf
+Plugin 'uarun/vim-protobuf'
 
 call vundle#end()
 
@@ -119,7 +124,7 @@ set hlsearch
 set incsearch
 
 " Theme
-colorscheme PaperColor
+colorscheme codedark
 set background=dark
 
 " No backups
