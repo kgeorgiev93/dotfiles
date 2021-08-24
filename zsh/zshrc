@@ -1,16 +1,17 @@
+# GENERAL
 export TERM="xterm-256color"
 export ZSH="/home/$USER/.oh-my-zsh"
-ZSH_THEME="powerlevel9k/powerlevel9k"
+ZSH_THEME="powerlevel10k/powerlevel10k"
 DISABLE_AUTO_TITLE="true"
 
 # PLUGINS
-plugins=(globalias git docker docker-compose pip poetry python cargo rust sudo tmux zsh-syntax-highlighting zsh-autosuggestions)
-
+plugins=(globalias git docker docker-compose pip python cargo rust sudo tmux zsh-syntax-highlighting zsh-autosuggestions)
 source $ZSH/oh-my-zsh.sh
 
 # ALIASES
 unalias -m '*'
 alias grep="grep --color=auto"
+alias ipa="ip -c a"
 alias ws="cd ~/workspace"
 alias ls='ls --color=auto'
 alias ll='ls -alF'
@@ -19,7 +20,7 @@ alias c='clear'
 alias o='xdg-open'
 alias gitupd='gitup -t -1 -p'
 
-# Hunter
+# HUNTER
 alias hunter_build='build.py --jobs=8 --toolchain=gcc-7-cxx14-pic \
 --fwd HUNTER_RUN_INSTALL=ON HUNTER_CONFIGURATION_TYPES=Release \
 --config Release '
@@ -28,9 +29,9 @@ alias hunter_build_debug='build.py --jobs=8 --toolchain=gcc-7-cxx14-pic \
 --fwd HUNTER_RUN_INSTALL=ON HUNTER_CONFIGURATION_TYPES=Debug HUNTER_KEEP_PACKAGE_SOURCES=ON \
 --config Debug '
 
-source ~/workspace/docker/hunter_builds/.bash_aliases
+source ~/workspace/git/kgeorgiev93/hunter-docker-builds/.bash_aliases
 
-# Binds
+# BINDS
 bindkey '^ ' autosuggest-accept # binds ctrl-space to accept current autosuggestion
 
 # EXPORTS
@@ -38,60 +39,6 @@ export LESS="-XRF"
 export PATH=~/workspace/git/ruslo/polly/bin:~/.cargo/bin:$PATH
 export FZF_DEFAULT_COMMAND='rg --files --ignore-vcs --hidden'
 
-################### POWERLEVEL9K SETTINGS ###################
-
-# General Prompt settings
-POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(context dir dir_writable vcs)
-POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status date time)
-POWERLEVEL9K_PROMPT_ADD_NEWLINE=true
-POWERLEVEL9K_PROMPT_ON_NEWLINE=true
-
-# Context Settings
-DEFAULT_USER=krasimir
-POWERLEVEL9K_ALWAYS_SHOW_USER=true
-POWERLEVEL9K_ALWAYS_SHOW_CONTEXT=true
-
-# COLOR CUSTOMIZATION
-
-# List all available colors
-# for code ({000..255}) print -P -- "$code: %F{$code}This is how your text would look like%f"
-
-# Context
-POWERLEVEL9K_CONTEXT_DEFAULT_FOREGROUND='black'
-POWERLEVEL9K_CONTEXT_DEFAULT_BACKGROUND='033' #light blue
-POWERLEVEL9K_CONTEXT_ROOT_FOREGROUND='black'
-POWERLEVEL9K_CONTEXT_ROOT_BACKGROUND='red'
-POWERLEVEL9K_CONTEXT_SUDO_FOREGROUND='black'
-POWERLEVEL9K_CONTEXT_SUDO_BACKGROUND='red'
-POWERLEVEL9K_CONTEXT_REMOTE_FOREGROUND='black'
-POWERLEVEL9K_CONTEXT_REMOTE_BACKGROUND='082' #green
-POWERLEVEL9K_CONTEXT_REMOTE_SUDO_FOREGROUND='black'
-POWERLEVEL9K_CONTEXT_REMOTE_SUDO_BACKGROUND='082' #green
-
-# Dir
-POWERLEVEL9K_DIR_HOME_FOREGROUND='black'
-POWERLEVEL9K_DIR_HOME_BACKGROUND='082'
-POWERLEVEL9K_DIR_HOME_SUBFOLDER_FOREGROUND='black'
-POWERLEVEL9K_DIR_HOME_SUBFOLDER_BACKGROUND='087' #ligth blue
-POWERLEVEL9K_DIR_DEFAULT_FOREGROUND='black'
-POWERLEVEL9K_DIR_DEFAULT_BACKGROUND='196' #red
-POWERLEVEL9K_DIR_ETC_FOREGROUND='black'
-POWERLEVEL9K_DIR_ETC_BACKGROUND='196' #red
-
-# VCS
-POWERLEVEL9K_VCS_CLEAN_FOREGROUND='black'
-POWERLEVEL9K_VCS_CLEAN_BACKGROUND='010' #green
-POWERLEVEL9K_VCS_UNTRACKED_FOREGROUND='black'
-POWERLEVEL9K_VCS_UNTRACKED_BACKGROUND='011' #yellow
-POWERLEVEL9K_VCS_MODIFIED_FOREGROUND='black'
-POWERLEVEL9K_VCS_MODIFIED_BACKGROUND='196' #red
-
-# DATE
-POWERLEVEL9K_DATE_FOREGROUND='white'
-POWERLEVEL9K_DATE_BACKGROUND='237'
-
-# TIME
-POWERLEVEL9K_TIME_FOREGROUND='black'
-POWERLEVEL9K_TIME_BACKGROUND='247'
-
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
