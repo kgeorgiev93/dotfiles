@@ -27,4 +27,4 @@ git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-m
 
 # Set up zshrc
 cp ./zshrc ~/.zshrc
-cp ./p10k.zsh ~
+cp ./p10k.zsh ~/.p10k.zsh
