@@ -10,10 +10,6 @@ cd ../utils
 cd ../git
 ./setup.sh
 
-# Ctags
-cd ../ctags
-./setup.sh
-
 # Tmux
 cd ../tmux
 ./setup.sh

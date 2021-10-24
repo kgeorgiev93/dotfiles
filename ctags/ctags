@@ -1,9 +1,0 @@
---exclude=.git
---exclude=_builds
---exclude=_install
---exclude=_logs
---exclude=submodules
---exclude=\*.swp
---exclude=\*.bak
---exclude=\*.pyc
---exclude=\*.class

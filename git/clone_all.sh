@@ -7,6 +7,3 @@ curl -s https://api.github.com/users/kgeorgiev93/repos | grep \"clone_url\" | aw
 git clone https://github.com/cpp-pm/hunter ~/workspace/git/cpp-pm/hunter
 git clone https://github.com/cpp-pm/hunter-testing ~/workspace/git/cpp-pm/hunter-testing
 git clone https://github.com/ruslo/polly ~/workspace/git/ruslo/polly/
-
-# grpc
-git clone https://github.com/grpc/grpc ~/workspace/git/grpc/
