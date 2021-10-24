@@ -219,7 +219,6 @@ set rtp+=~/.fzf
 nnoremap <C-f> :Files<Cr>
 nnoremap <C-g> :Rg<Cr>
 let g:fzf_buffers_jump = 1 " [Buffers] Jump to the existing window if possible
-let g:fzf_tags_command = 'ctags -R' " [Tags] Command to generate tags file
 
 " ===== NERDTree
 map <leader>n :NERDTreeToggle<cr>

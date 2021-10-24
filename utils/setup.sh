@@ -1,5 +1,5 @@
 # utils
-sudo apt install -y curl htop tree
+sudo apt install -y curl htop tree python3-pip
 
 # c++
 sudo apt install -y gcc gcc-7 g++ g++-7
