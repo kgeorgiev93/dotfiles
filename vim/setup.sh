@@ -1,6 +1,7 @@
 # Install dependencies
 # coc
 curl -sL install-node.now.sh | sudo bash
+#TODO: not in path
 curl --compressed -o- -L https://yarnpkg.com/install.sh | bash
 
 # Install vim
