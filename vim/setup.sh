@@ -23,6 +23,7 @@ vim +PluginInstall +qall
 # coc setup
 cp coc-settings.json ~/.vim/
 cd ~/.vim/bundle/coc.nvim
+#TODO: not in path
 yarn install
 vim -c ':call coc#util#install()'
 
