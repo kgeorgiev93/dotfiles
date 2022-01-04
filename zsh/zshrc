@@ -5,7 +5,7 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 DISABLE_AUTO_TITLE="true"
 
 # PLUGINS
-plugins=(globalias git docker docker-compose pip python cargo rust sudo tmux zsh-syntax-highlighting zsh-autosuggestions)
+plugins=(globalias git docker docker-compose pip python rust sudo tmux zsh-syntax-highlighting zsh-autosuggestions)
 source $ZSH/oh-my-zsh.sh
 
 # ALIASES
@@ -42,3 +42,5 @@ export FZF_DEFAULT_COMMAND='rg --files --ignore-vcs --hidden'
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
+export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
