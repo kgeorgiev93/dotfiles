@@ -393,7 +393,8 @@
       # If tag name is at most 32 characters long, show it in full.
       # Otherwise show the first 12 … the last 12.
       # Tip: To always show tag name in full without truncation, delete the next line.
-      res+="${meta}#${clean}${tag//\%/%%}"
+      (( $#tag > 32 )) && tag[13,-13]="…"  # <-- this line
+      res+="${meta} ${clean}${tag//\%/%%}"
     fi
 
     # Display the current Git commit if there is no branch and no tag.
