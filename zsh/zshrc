@@ -18,7 +18,7 @@ alias ll='ls -alF'
 alias l='ls -lF'
 alias c='clear'
 alias o='xdg-open'
-alias gitupd="gitup -t -1 -p -e 'git fetch --prune origin \"+refs/tags/*:refs/tags/*\"' -e 'git submodule update --init'"
+alias gitupd="gitup -t -1 -p; gitup -e 'git fetch --prune origin \"+refs/tags/*:refs/tags/*\"'; gitup -e 'git submodule update --init'"
 
 # HUNTER
 alias hunter_build='build.py --jobs=8 --toolchain=gcc-7-cxx14-pic \
