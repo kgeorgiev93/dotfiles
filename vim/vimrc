@@ -10,14 +10,10 @@ call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
 
 " Theme
-Plugin 'NLKNguyen/papercolor-theme'
 Plugin 'tomasiser/vim-code-dark'
 
 " Whitespace management
 Plugin 'ntpeters/vim-better-whitespace'
-
-" Text filtering and allignment
-Plugin 'godlygeek/tabular'
 
 " Commenting
 Plugin 'scrooloose/nerdcommenter'
@@ -42,24 +38,18 @@ Plugin 'dhruvasagar/vim-prosession'
 Plugin 'christoomey/vim-tmux-navigator'
 Plugin 'tmux-plugins/vim-tmux-focus-events'
 
-" Clang-format
-Plugin 'rhysd/vim-clang-format'
+" Fuzzy finder
+Plugin 'junegunn/fzf.vim'
+
+" Linting
+Plugin 'dense-analysis/ale'
+Plugin 'maximbaz/lightline-ale'
 
 " cxx semantic highlight
 Plugin 'jackguo380/vim-lsp-cxx-highlight'
 
-" Fuzzy finder
-Plugin 'junegunn/fzf.vim'
-
-" Asynchronous code linting
-Plugin 'dense-analysis/ale'
-Plugin 'maximbaz/lightline-ale'
-
 " Coc
 Plugin 'neoclide/coc.nvim'
-
-" sourcetrail
-Plugin 'CoatiSoftware/vim-sourcetrail'
 
 " Python
 Plugin 'vim-python/python-syntax'
@@ -71,7 +61,6 @@ Plugin 'cespare/vim-toml'
 Plugin 'ekalinin/Dockerfile.vim'
 
 " Plantuml
-Plugin 'scrooloose/vim-slumlord'
 Plugin 'aklt/plantuml-syntax'
 
 " Rust
