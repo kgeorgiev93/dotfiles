@@ -1,7 +1,3 @@
-# Files
-cd files
-./setup.sh
-
 # Utils
 cd ../utils
 ./setup.sh
