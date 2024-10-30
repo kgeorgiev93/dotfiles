@@ -15,7 +15,7 @@
     diffcm  = diff --color-moved
 [core]
     safecrlf = true
-    editor = vim
+    editor = nvim
     autocrlf = false
 [color]
     ui = true
