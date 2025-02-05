@@ -26,7 +26,13 @@ require("lazy").setup({
   checker = { enabled = true },
 })
 
-require('lualine').setup()
+-- require('lualine').setup()
+require'lualine'.setup {
+          options = {
+            theme = 'sonokai'
+          }
+        }
+
 require('auto-session').setup()
 require'nvim-treesitter.configs'.setup
 {

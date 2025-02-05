@@ -60,7 +60,10 @@ vim.api.nvim_set_keymap("n", "<F5>", [[:let _s=@/ | %s/\s\+$//e | let @/=_s<CR>]
 -- Plugins
 require("config.lazy")
 
-vim.cmd("colorscheme vscode")
+-- vim.g.sonokai_style = 'atlantis'
+-- vim.g.sonokai_style = 'maia'
+vim.g.sonokai_style = 'andromeda'
+vim.cmd("colorscheme sonokai")
 
 -- FZF
 vim.opt.rtp:append("~/.fzf")
